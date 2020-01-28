@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Shortcodes in Widgets
  * Description: Allows shortcodes to be used in widgets
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets
@@ -24,6 +24,10 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname( __FILE__).'/pluginmenu/menu.php');
+register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_siw');
+
+// include update client
+require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
 
 /**
  * Setup actions and filters.
@@ -33,11 +37,23 @@ require_once(dirname( __FILE__).'/pluginmenu/menu.php');
  */
 // add actions
 add_action('admin_menu', 'azrcrv_siw_create_admin_menu');
+add_action('plugins_loaded', 'azrcrv_siw_load_languages');
 
 // add filters
 add_filter('widget_text', 'shortcode_unautop');
 add_filter('widget_text', 'do_shortcode');
 add_filter('plugin_action_links', 'azrcrv_siw_add_plugin_action_link', 10, 2);
+
+/**
+ * Load language files.
+ *
+ * @since 1.0.0
+ *
+ */
+function azrcrv_siw_load_languages() {
+    $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
+    load_plugin_textdomain('azrcrv-siw', false, $plugin_rel_path);
+}
 
 /**
  * Add Shortcodes in Widgets action link on plugins page.
@@ -93,7 +109,7 @@ function azrcrv_siw_settings(){
 	?>
 	
 	<div id="azrcrv-siw-general" class="wrap">
-		<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+		<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 		<p>
 			<?php esc_html_e('This plugin allows shortcodes to be used in widgets.', ''); ?>
 		</p>

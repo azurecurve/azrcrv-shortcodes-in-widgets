@@ -1,36 +1,76 @@
 === Shortcodes in Widgets ===
-Contributors: azurecurve
-Tags: shortcode, shortcodes, widget, widgets
-Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets/
-Donate link: https://development.azurecurve.co.uk/support-development/
-Requires at least: 1.0.0
-Tested up to: 1.0.0
-Requires PHP: 5.6
-Stable tag: trunk
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Description:	Allows shortcodes to be used in HTML widgets.
+Version:		1.1.0
+Tags:			shortcode, shortcodes, widget, widgets
+Author:			azurecurve
+Author URI:		https://development.azurecurve.co.uk/
+Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets/
+Download link:	https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/download/v1.1.0/azrcrv-shortcodes-in-widgets.zip
+Donate link:	https://development.azurecurve.co.uk/support-development/
+Requires PHP:	5.6
+Requires:		1.0.0
+Tested:			4.9.99
+Text Domain:	shortcodes-in-widgets
+Domain Path:	/languages
+License: 		GPLv2 or later
+License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 
 Allows shortcodes to be used in HTML widgets.
 
 == Description ==
+
+# Description
+
 Allows shortcodes to be used in HTML widgets.
 
-== Installation ==
-To install the Shortcodes in Widgets plugin:
-* Download the plugin from <a href='https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/'>GitHub</a>.
-* Upload the entire zip file using the Plugins upload function in your ClassicPress admin panel.
-* Activate the plugin.
+This plugin is multisite compatible.
 
-== Changelog ==
-Changes and feature additions for the Icons plugin:
-= 1.0.1 =
-* Update azurecurve menu for easier maintenance.
-* Move require of azurecurve menu below security check.
-= 1.0.0 =
-* First version for ClassicPress forked from azurecurve Shortcodes in Widgets WordPress Plugin.
+== Installation ==
+
+# Installation Instructions
+
+ * Download the plugin from [GitHub](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/latest/).
+ * Upload the entire zip file using the Plugins upload function in your ClassicPress admin panel.
+ * Activate the plugin.
 
 == Frequently Asked Questions ==
-= Can I translate this plugin? =
-* Yes, the .pot fie is in the plugins languages folder and can also be downloaded from the plugin page on https://development.azurecurve.co.uk/; if you do translate this plugin, please sent the .po and .mo files to translations@azurecurve.co.uk for inclusion in the next version (full credit will be given).
-= Is this plugin compatible with both WordPress and ClassicPress? =
-* This plugin is developed for ClassicPress, but will likely work on WordPress.
+
+# Frequently Asked Questions
+
+### Can I translate this plugin?
+Yes, the .pot fie is in the plugins languages folder and can also be downloaded from the plugin page on https://development.azurecurve.co.uk; if you do translate this plugin, please sent the .po and .mo files to translations@azurecurve.co.uk for inclusion in the next version (full credit will be given).
+
+### Is this plugin compatible with both WordPress and ClassicPress?
+This plugin is developed for ClassicPress, but will likely work on WordPress.
+
+== Changelog ==
+
+# Changelog
+
+### [Version 1.1.0](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/tree/v1.1.0)
+ * Add integration with Update Manager for automatic updates.
+ * Fix issue with display of azurecurve menu.
+ * Change settings page heading.
+ * Add load_plugin_textdomain to handle translations.
+
+### [Version 1.0.1](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/tree/v1.0.1)
+ * Update azurecurve menu for easier maintenance.
+ * Move require of azurecurve menu below security check.
+
+### [Version 1.0.0](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/tree/v1.0.0)
+ * Initial release for ClassicPress forked from azurecurve Shortcodes in Widgets WordPress Plugin.
+
+== Other Notes ==
+
+# About azurecurve
+
+**azurecurve** was one of the first plugin developers to start developing for Classicpress; all plugins are available from [azurecurve Development](https://development.azurecurve.co.uk/) and are integrated with the [Update Manager plugin](https://codepotent.com/classicpress/plugins/update-manager/) by [CodePotent](https://codepotent.com/) for fully automated, no hassle, updates.
+
+Some of the top plugins available from **azurecurve** are:
+* [Add Twitter Cards](https://development.azurecurve.co.uk/classicpress-plugins/add-twitter-cards/)
+* [Breadcrumbs](https://development.azurecurve.co.uk/classicpress-plugins/breadcrumbs/)
+* [Series Index](https://development.azurecurve.co.uk/classicpress-plugins/series-index/)
+* [To Twitter](https://development.azurecurve.co.uk/classicpress-plugins/to-twitter/)
+* [Theme Switches](https://development.azurecurve.co.uk/classicpress-plugins/theme-switcher/)
+* [Toggle Show/Hide](https://development.azurecurve.co.uk/classicpress-plugins/toggle-showhide/)
