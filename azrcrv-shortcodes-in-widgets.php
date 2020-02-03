@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Shortcodes in Widgets
  * Description: Allows shortcodes to be used in widgets
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets
@@ -52,7 +52,7 @@ add_filter('plugin_action_links', 'azrcrv_siw_add_plugin_action_link', 10, 2);
  */
 function azrcrv_siw_load_languages() {
     $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
-    load_plugin_textdomain('azrcrv-siw', false, $plugin_rel_path);
+    load_plugin_textdomain('shortcodes-in-widgets', false, $plugin_rel_path);
 }
 
 /**
