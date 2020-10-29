@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Shortcodes in Widgets
  * Description: Allows shortcodes to be used in widgets
- * Version: 1.1.4
+ * Version: 1.2.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets/
@@ -43,6 +43,8 @@ add_action('plugins_loaded', 'azrcrv_siw_load_languages');
 add_filter('widget_text', 'shortcode_unautop');
 add_filter('widget_text', 'do_shortcode');
 add_filter('plugin_action_links', 'azrcrv_siw_add_plugin_action_link', 10, 2);
+add_filter('codepotent_update_manager_image_path', 'azrcrv_siw_custom_image_path');
+add_filter('codepotent_update_manager_image_url', 'azrcrv_siw_custom_image_url');
 
 /**
  * Load language files.
@@ -53,6 +55,32 @@ add_filter('plugin_action_links', 'azrcrv_siw_add_plugin_action_link', 10, 2);
 function azrcrv_siw_load_languages() {
     $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
     load_plugin_textdomain('shortcodes-in-widgets', false, $plugin_rel_path);
+}
+
+/**
+ * Custom plugin image path.
+ *
+ * @since 1.2.0
+ *
+ */
+function azrcrv_siw_custom_image_path($path){
+    if (strpos($path, 'azrcrv-shortcodes-in-widgets') !== false){
+        $path = plugin_dir_path(__FILE__).'assets/pluginimages';
+    }
+    return $path;
+}
+
+/**
+ * Custom plugin image url.
+ *
+ * @since 1.2.0
+ *
+ */
+function azrcrv_siw_custom_image_url($url){
+    if (strpos($url, 'azrcrv-shortcodes-in-widgets') !== false){
+        $url = plugin_dir_url(__FILE__).'assets/pluginimages';
+    }
+    return $url;
 }
 
 /**
@@ -69,7 +97,7 @@ function azrcrv_siw_add_plugin_action_link($links, $file){
 	}
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-siw"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'shortcodes-in-widgets').'</a>';
+		$settings_link = '<a href="'.admin_url('admin.php?page=azrcrv-siw').'"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'shortcodes-in-widgets').'</a>';
 		array_unshift($links, $settings_link);
 	}
 

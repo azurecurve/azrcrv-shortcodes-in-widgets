@@ -1,12 +1,12 @@
 === Shortcodes in Widgets ===
 
 Description:	Allows shortcodes to be used in HTML widgets.
-Version:		1.1.4
+Version:		1.2.0
 Tags:			shortcode, shortcodes, widget, widgets
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets/
-Download link:	https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/download/v1.1.4/azrcrv-shortcodes-in-widgets.zip
+Download link:	https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/download/v1.2.0/azrcrv-shortcodes-in-widgets.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
 Requires:		1.0.0
@@ -48,6 +48,11 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # Changelog
 
+### [Version 1.2.0](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/tag/v1.2.0)
+ * Fix plugin action link to use admin_url() function.
+ * Add plugin icon and banner.
+ * Update azurecurve plugin menu.
+
 ### [Version 1.1.4](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/tag/v1.1.4)
  * Fix bug with plugin menu.
  * Update plugin menu css.
@@ -87,5 +92,5 @@ Some of the top plugins available from **azurecurve** are:
 * [Breadcrumbs](https://development.azurecurve.co.uk/classicpress-plugins/breadcrumbs/)
 * [Series Index](https://development.azurecurve.co.uk/classicpress-plugins/series-index/)
 * [To Twitter](https://development.azurecurve.co.uk/classicpress-plugins/to-twitter/)
-* [Theme Switches](https://development.azurecurve.co.uk/classicpress-plugins/theme-switcher/)
+* [Theme Switcher](https://development.azurecurve.co.uk/classicpress-plugins/theme-switcher/)
 * [Toggle Show/Hide](https://development.azurecurve.co.uk/classicpress-plugins/toggle-showhide/)
