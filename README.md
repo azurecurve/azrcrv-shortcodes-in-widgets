@@ -7,8 +7,6 @@ Allows shortcodes to be used in HTML widgets.
 
 This plugin is multisite compatible.
 
-== Installation ==
-
 # Installation Instructions
 
  * Download the latest release of the plugin from [GitHub](https://github.com/azurecurve/azrcrv-shortcodes-in-widgets/releases/latest/).
