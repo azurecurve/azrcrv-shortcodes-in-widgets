@@ -3,8 +3,9 @@
  * ------------------------------------------------------------------------------
  * Plugin Name:		Shortcodes in Widgets
  * Description:		Allows shortcodes to be used in widgets
- * Version:			1.2.5
+ * Version:			1.2.6
  * Requires CP:		1.0
+ * Requires PHP:	7.4
  * Author:			azurecurve
  * Author URI:		https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/shortcodes-in-widgets/
